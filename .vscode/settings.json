@@ -1,0 +1,13 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "git.inputValidationSubjectLength": 72,
+  "scss.lint.unknownAtRules": "ignore", // ignore sass @tailwind warning
+  "editor.tabSize": 2,
+  "[typescript]": {
+    "editor.tabSize": 2
+  }
+}
