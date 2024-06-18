@@ -1,7 +1,7 @@
 import { ApiPropertyOptional } from '@nestjs/swagger';
 import { IsOptional, IsString } from 'class-validator';
 
-export class CreateDto {
+export class CreateUserDto {
   @IsOptional()
   @IsString()
   @ApiPropertyOptional({ description: '유저 지갑주소', required: false })

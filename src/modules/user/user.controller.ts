@@ -2,7 +2,7 @@ import { Body, Controller, Get, HttpException, InternalServerErrorException, Log
 import { ApiBody, ApiOkResponse, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { ServiceException } from 'src/errors/serviceException';
 
-import { CreateDto } from './dto/create-user.dto';
+import { CreateUserDto } from './dto/create-user.dto';
 import { ResponseDto } from './dto/response-user.dto';
 import { UserService } from './user.service';
 
@@ -17,7 +17,7 @@ export class UserController {
   @ApiOperation({
     summary: 'Create User Api',
   })
-  @ApiBody({ type: CreateDto, description: 'Create User' })
+  @ApiBody({ type: CreateUserDto, description: 'Create User' })
   @ApiOkResponse({
     description: 'Create User Api',
     type: ResponseDto,
@@ -25,7 +25,7 @@ export class UserController {
   })
   async create(
     // transform: true => 자동으로 타입 변환, 초기 값 정상 작동
-    @Body() createDto: CreateDto,
+    @Body() createDto: CreateUserDto,
   ): Promise<ResponseDto> {
     try {
       this.logger.log('Entering create UserController method');

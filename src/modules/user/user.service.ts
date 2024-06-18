@@ -5,7 +5,7 @@ import { Repository } from 'typeorm';
 
 import { User } from './entities/user.entity';
 
-import type { CreateDto } from './dto/create-user.dto';
+import type { CreateUserDto } from './dto/create-user.dto';
 import type { ResponseDto } from './dto/response-user.dto';
 
 @Injectable()
@@ -16,7 +16,7 @@ export class UserService {
   ) {}
   private readonly logger = new Logger(UserService.name);
 
-  async create(createDto: CreateDto): Promise<ResponseDto> {
+  async create(createDto: CreateUserDto): Promise<ResponseDto> {
     this.logger.log('Entering create UserService method');
 
     const { email } = createDto;
