@@ -18,5 +18,6 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "esModuleInterop": true
-  }
+  },
+  "include": ["src", "eslint.config.mjs"]
 }
