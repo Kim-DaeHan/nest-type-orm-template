@@ -25,6 +25,14 @@ export default [
     'plugin:prettier/recommended',
   ),
   {
+    ignores: [
+      'node_modules/',
+      'dist/',
+      'eslint.config.mjs',
+      'prettier.config.mjs',
+      'webpack-hmr.config.js',
+      'test/**/*.ts',
+    ],
     plugins: {
       prettier,
       '@typescript-eslint': tsEslintPlugin,
@@ -37,11 +45,12 @@ export default [
       ecmaVersion: 'latest',
       sourceType: 'module',
       parserOptions: {
-        project: `${__dirname}/tsconfig.json`,
+        project: './tsconfig.json',
         tsconfigRootDir: __dirname,
       },
     },
     rules: {
+      'no-useless-constructor': 'off',
       'nonblock-statement-body-position': ['error', 'beside'],
       'object-curly-spacing': ['error', 'always'],
       'no-console': ['warn', { allow: ['warn', 'error'] }],
