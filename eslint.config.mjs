@@ -25,14 +25,7 @@ export default [
     'plugin:prettier/recommended',
   ),
   {
-    ignores: [
-      'node_modules/',
-      'dist/',
-      'eslint.config.mjs',
-      'prettier.config.mjs',
-      'webpack-hmr.config.js',
-      'test/**/*.ts',
-    ],
+    ignores: ['node_modules/', 'dist/', 'eslint.config.mjs', 'prettier.config.mjs', 'test/**/*.ts'],
     plugins: {
       prettier,
       '@typescript-eslint': tsEslintPlugin,

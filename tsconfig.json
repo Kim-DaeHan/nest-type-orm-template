@@ -20,5 +20,5 @@
     "esModuleInterop": true
   },
   "include": ["src", "eslint.config.mjs", "prettier.config.mjs"],
-  "exclude": ["node_modules", "dist", "test", "webpack-hmr.config.js"]
+  "exclude": ["node_modules", "dist", "test"]
 }
